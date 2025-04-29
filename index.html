@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional electrician services for residential and commercial clients. Reliable, licensed, and local. Contact us for wiring, repairs, and installations.">
+    <meta name="keywords" content="electrician, electrical contractor, wiring, repairs, installations, local electrician">
+    <meta name="author" content="Your Business Name">
+    <title>Mazhar Khan | Electrician Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-['Poppins']">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-900 to-blue-700 text-white sticky top-0 z-10 shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="text-3xl font-bold tracking-tight text-white-50">Mazhar Khan</div>
+            <ul class="hidden md:flex space-x-8  text-2xl">
+                <li><a href="#home" class="hover:text-yellow-400 transition duration-300">Home</a></li>
+                <li><a href="#about" class="hover:text-yellow-400 transition duration-300">About</a></li>
+                <li><a href="#services" class="hover:text-yellow-400 transition duration-300">Services</a></li>
+                <li><a href="#work" class="hover:text-yellow-400 transition duration-300">Portfolio</a></li>
+                <li><a href="#testimonials" class="hover:text-yellow-400 transition duration-300">Clients</a></li>
+                <li><a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a></li>
+            </ul>
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen overflow-hidden">
+        <div class="slider absolute w-full h-full">
+            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fcommercial-electrician&psig=AOvVaw1hkrVVriKr3nTVsHQsQXqT&ust=1746018472188000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJjQqfCn_YwDFQAAAAAdAAAAABAE');"></div>
+            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://5.imimg.com/data5/SELLER/Default/2025/1/478815150/WZ/TO/YG/50861833/commercial-electrical-works.jpg');"></div>
+            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://commercial-electrical-services.weebly.com/uploads/1/2/9/8/129850327/nm-cabling-fuseboard-upgrades-single-and-3-phase_orig.jpg');"></div>
+            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://media.istockphoto.com/id/1354891373/photo/a-male-electrician-works-in-a-switchboard-with-an-electrical-connecting-cable.jpg?s=612x612&w=0&k=20&c=Kf3dKdLua7qjo_ekhqGOKeL-f9rxxjNsvAkNgKZJ6BI=');"></div>
+
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto text-center px-6 relative h-full flex flex-col justify-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white">Your Trusted <span class="text-yellow-400">Electrical Expert</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto opacity-90 text-white">Licensed, reliable, and local. We handle all your electrical needs with expertise and precision.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-yellow-400 text-blue-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105">Get Free Quote</a>
+                <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-800 transition duration-300">Our Services</a>
+            </div>
+        </div>
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+            
+            function nextSlide() {
+                slides[currentSlide].style.opacity = '0';
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].style.opacity = '1';
+            }
+            
+            setInterval(nextSlide, 5000);
+        </script>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 relative">
+                About Us
+                <span class="block w-20 h-1 bg-yellow-400 mx-auto mt-4"></span>
+            </h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://as1.ftcdn.net/v2/jpg/05/43/92/28/1000_F_543922851_xuMmVd2IAsvttDukyFksFRmRbvUuMyWQ.jpg" alt="Electrician at Work" class="rounded-2xl shadow-2xl transform hover:scale-105 transition duration-500">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-800">A Decade of Excellence in Electrical Services</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">With over 10 years of experience, we've established ourselves as the go-to electrical service provider in the region. Our team of certified professionals is dedicated to delivering top-quality solutions for all your electrical needs.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            <span>Licensed & Certified Professionals</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            <span>24/7 Emergency Services</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3 text-xl"></i>
+                            <span>100% Customer Satisfaction</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-100 py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 relative">
+                Our Services
+                <span class="block w-20 h-1 bg-yellow-400 mx-auto mt-4"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-800">Wiring & Installations</h3>
+                    <p class="text-gray-600 leading-relaxed">Expert wiring solutions for new constructions, renovations, and custom lighting installations. We ensure safety and efficiency in every project.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-800">Repairs & Maintenance</h3>
+                    <p class="text-gray-600 leading-relaxed">Swift and reliable repair services for all electrical issues. Regular maintenance to prevent future problems and ensure optimal performance.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-800">Emergency Services</h3>
+                    <p class="text-gray-600 leading-relaxed">24/7 emergency electrical support for urgent issues. Quick response times and professional solutions when you need them most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Card Slider Section -->
+    <section id="work" class="py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 relative">
+                Our Latest Projects
+                <span class="block w-20 h-1 bg-yellow-400 mx-auto mt-4"></span>
+            </h2>
+            <div class="relative">
+                <div class="overflow-hidden rounded-2xl">
+                    <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Mobile-first approach with responsive sizing -->
+                        <div class="min-w-full p-2 sm:p-4" style="width:100%;">
+                            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                                <img src="https://www.build-review.com/wp-content/uploads/2021/12/Smart-Home-Technology.jpg" alt="Smart" class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover transform hover:scale-105 transition duration-500">
+                                <div class="p-4 sm:p-6 md:p-8">
+                                    <h3 class="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4 text-blue-800">Smart Home Installation</h3>
+                                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed">State-of-the-art smart home automation system installation with integrated lighting and security features.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="min-w-full p-2 sm:p-4">
+                            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                                <img src="https://brintelectric.com/wp-content/uploads/2023/10/Worker-checking-wiring-of-commercial-building.jpg" alt="Commercial Rewiring Project" class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover transform hover:scale-105 transition duration-500">
+                                <div class="p-4 sm:p-6 md:p-8">
+                                    <h3 class="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4 text-blue-800">Commercial Rewiring</h3>
+                                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Complete electrical system upgrade for a modern office complex, improving safety and efficiency.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="min-w-full p-2 sm:p-4">
+                            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                                <img src="https://as1.ftcdn.net/v2/jpg/05/43/92/28/1000_F_543922851_xuMmVd2IAsvttDukyFksFRmRbvUuMyWQ.jpg" alt="Outdoor Lighting Project" class="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover transform hover:scale-105 transition duration-500">
+                                <div class="p-4 sm:p-6 md:p-8">
+                                    <h3 class="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4 text-blue-800">Outdoor Lighting</h3>
+                                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Custom outdoor lighting design and installation for enhanced security and aesthetics.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Responsive navigation buttons -->
+                <button id="prev" class="absolute top-1/2 left-2 sm:left-8 transform -translate-y-1/2 bg-blue-600 text-white p-3 sm:p-6 rounded-full hover:bg-blue-700 transition duration-300 text-lg sm:text-2xl">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="next" class="absolute top-1/2 right-2 sm:right-8 transform -translate-y-1/2 bg-blue-600 text-white p-3 sm:p-6 rounded-full hover:bg-blue-700 transition duration-300 text-lg sm:text-2xl">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <!-- Responsive dots -->
+                <div class="flex justify-center mt-4 sm:mt-8 space-x-2 sm:space-x-4">
+                    <span class="dot w-4 h-4 sm:w-6 sm:h-6 bg-gray-300 rounded-full cursor-pointer hover:bg-blue-600 transition duration-300" data-index="0"></span>
+                    <span class="dot w-4 h-4 sm:w-6 sm:h-6 bg-gray-300 rounded-full cursor-pointer hover:bg-blue-600 transition duration-300" data-index="1"></span>
+                    <span class="dot w-4 h-4 sm:w-6 sm:h-6 bg-gray-300 rounded-full cursor-pointer hover:bg-blue-600 transition duration-300" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-gray-100 py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 relative">
+                Client Testimonials
+                <span class="block w-20 h-1 bg-yellow-400 mx-auto mt-4"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="text-yellow-400 mb-6">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-lg italic mb-6">"Exceptional service! They fixed our complex wiring issue quickly and professionally. The team was knowledgeable and courteous. Highly recommend!"</p>
+                    <div class="flex items-center">
+                        <div>
+                            <p class="font-semibold text-blue-800">Mr Avinash</p>
+                            <p class="text-gray-500">Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="text-yellow-400 mb-6">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-lg italic mb-6">"Outstanding work on our office lighting installation. The team was professional, efficient, and the pricing was very competitive. Will definitely use their services again!"</p>
+                    <div class="flex items-center">
+                        <div>
+                            <p class="font-semibold text-blue-800">Mr Parma</p>
+                            <p class="text-gray-500">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="text-yellow-400 mb-6">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-lg italic mb-6">"Outstanding work on our office lighting installation. The team was professional, efficient, and the pricing was very competitive. Will definitely use their services again!"</p>
+                    <div class="flex items-center">
+                        <div>
+                            <p class="font-semibold text-blue-800">Mr Bajaj </p>
+                            <p class="text-gray-500">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="text-yellow-400 mb-6">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-lg italic mb-6">"Outstanding work on our office lighting installation. The team was professional, efficient, and the pricing was very competitive. Will definitely use their services again!"</p>
+                    <div class="flex items-center">
+                        <div>
+                            <p class="font-semibold text-blue-800">Mr Irshat </p>
+                            <p class="text-gray-500">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 relative">
+                Contact Us
+                <span class="block w-20 h-1 bg-yellow-400 mx-auto mt-4"></span>
+            </h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-8">Get in Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-lg">9823484493</p>
+                                <p class="text-lg">9834202775</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <p class="text-lg">umairkhanreact98@gmail.com</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <p class="text-lg">Amravati, Maharashtra</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form id="contact-form" action="https://formspree.io/f/xyyqpwkw" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-lg mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-4 rounded-lg bg-blue-800 border border-blue-600 focus:outline-none focus:border-yellow-400 transition duration-300" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-lg mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-4 rounded-lg bg-blue-800 border border-blue-600 focus:outline-none focus:border-yellow-400 transition duration-300" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-lg mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full p-4 rounded-lg bg-blue-800 border border-blue-600 focus:outline-none focus:border-yellow-400 transition duration-300" required></textarea>
+                        </div>
+                        <div id="form-status"></div>
+                        <button type="submit" class="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105">
+                            <span id="submit-text">Send Message</span>
+                            <span id="loading-text" class="hidden">Sending...</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-2xl font-bold mb-4 md:mb-0">Mazhar Khan</div>
+                <div class="flex space-x-6">
+                    <a href="https://facebook.com" target="_blank" class="hover:text-yellow-400 transition duration-300">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="hover:text-yellow-400 transition duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p>© 2025 Mazhar Khan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handling
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // Slider functionality
+        const slider = document.getElementById('slider');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+        const totalSlides = dots.length;
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('bg-blue-600', index === currentIndex);
+                dot.classList.toggle('bg-gray-300', index !== currentIndex);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentIndex = parseInt(dot.getAttribute('data-index'));
+                updateSlider();
+            });
+        });
+
+        // Auto-scroll
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlider();
+        }, 5000);
+    </script>
+</body>
+</html>
