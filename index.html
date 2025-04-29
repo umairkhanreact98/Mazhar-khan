@@ -6,6 +6,7 @@
     <meta name="description" content="Professional electrician services for residential and commercial clients. Reliable, licensed, and local. Contact us for wiring, repairs, and installations.">
     <meta name="keywords" content="electrician, electrical contractor, wiring, repairs, installations, local electrician">
     <meta name="author" content="Your Business Name">
+    <meta name="google-site-verification" content="lUMfW_rRCKaFU8fIw--cqThcpZWklUtD4l9LJm8MWxw" />
     <title>Mazhar Khan | Electrician Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -33,11 +34,10 @@
     <!-- Hero Section -->
     <section id="home" class="relative h-screen overflow-hidden">
         <div class="slider absolute w-full h-full">
-            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fcommercial-electrician&psig=AOvVaw1hkrVVriKr3nTVsHQsQXqT&ust=1746018472188000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJjQqfCn_YwDFQAAAAAdAAAAABAE');"></div>
-            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://5.imimg.com/data5/SELLER/Default/2025/1/478815150/WZ/TO/YG/50861833/commercial-electrical-works.jpg');"></div>
-            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://commercial-electrical-services.weebly.com/uploads/1/2/9/8/129850327/nm-cabling-fuseboard-upgrades-single-and-3-phase_orig.jpg');"></div>
-            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://media.istockphoto.com/id/1354891373/photo/a-male-electrician-works-in-a-switchboard-with-an-electrical-connecting-cable.jpg?s=612x612&w=0&k=20&c=Kf3dKdLua7qjo_ekhqGOKeL-f9rxxjNsvAkNgKZJ6BI=');"></div>
-
+            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://images.unsplash.com/photo-1621905251189-41c7aa2a3fa9?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('https://images.unsplash.com/photo-1621905252825-1cf3778c6741?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
         </div>
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="container mx-auto text-center px-6 relative h-full flex flex-col justify-center">
@@ -49,16 +49,48 @@
             </div>
         </div>
         <script>
-            const slides = document.querySelectorAll('.slide');
-            let currentSlide = 0;
-            
-            function nextSlide() {
-                slides[currentSlide].style.opacity = '0';
-                currentSlide = (currentSlide + 1) % slides.length;
-                slides[currentSlide].style.opacity = '1';
-            }
-            
-            setInterval(nextSlide, 5000);
+            document.addEventListener('DOMContentLoaded', function() {
+                const slides = document.querySelectorAll('.slide');
+                let currentSlide = 0;
+                
+                function nextSlide() {
+                    slides[currentSlide].style.opacity = '0';
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].style.opacity = '1';
+                }
+                
+                // Initial state
+                slides[0].style.opacity = '1';
+                
+                // Auto advance slides
+                setInterval(nextSlide, 5000);
+                
+                // Add swipe functionality for mobile
+                let touchStartX = 0;
+                let touchEndX = 0;
+                
+                document.querySelector('.slider').addEventListener('touchstart', e => {
+                    touchStartX = e.changedTouches[0].screenX;
+                });
+                
+                document.querySelector('.slider').addEventListener('touchend', e => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                });
+                
+                function handleSwipe() {
+                    const swipeThreshold = 50;
+                    if (touchStartX - touchEndX > swipeThreshold) {
+                        // Swipe left
+                        nextSlide();
+                    } else if (touchEndX - touchStartX > swipeThreshold) {
+                        // Swipe right
+                        slides[currentSlide].style.opacity = '0';
+                        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                        slides[currentSlide].style.opacity = '1';
+                    }
+                }
+            });
         </script>
     </section>
 
