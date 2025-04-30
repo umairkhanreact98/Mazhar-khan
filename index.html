@@ -5,12 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional electrician services for residential and commercial clients. Reliable, licensed, and local. Contact us for wiring, repairs, and installations.">
     <meta name="keywords" content="electrician, electrical contractor, wiring, repairs, installations, local electrician">
-    <meta name="author" content="Your Business Name">
+    <meta name="author" content="Mazhar khan">
     <meta name="google-site-verification" content="lUMfW_rRCKaFU8fIw--cqThcpZWklUtD4l9LJm8MWxw" />
     <title>Mazhar Khan | Electrician Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to right, #1e3a8a, #1e40af);
+            padding: 1rem;
+            z-index: 9;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            color: white;
+            text-align: center;
+            font-size: 1.25rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 font-['Poppins']">
     <!-- Header -->
@@ -25,19 +54,28 @@
                 <li><a href="#testimonials" class="hover:text-yellow-400 transition duration-300">Clients</a></li>
                 <li><a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a></li>
             </ul>
-            <button class="md:hidden text-2xl">
+            <button onclick="toggleMobileMenu()" class="md:hidden text-2xl">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="#home" class="hover:text-yellow-400 transition duration-300">Home</a>
+            <a href="#about" class="hover:text-yellow-400 transition duration-300">About</a>
+            <a href="#services" class="hover:text-yellow-400 transition duration-300">Services</a>
+            <a href="#work" class="hover:text-yellow-400 transition duration-300">Portfolio</a>
+            <a href="#testimonials" class="hover:text-yellow-400 transition duration-300">Clients</a>
+            <a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="relative h-screen overflow-hidden">
         <div class="slider absolute w-full h-full">
-            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000" style="background-image: url('./image.jpg');"></div>
-            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('./image1.jpg');"></div>
-            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('./image2.jpg');"></div>
-            <div class="slide absolute w-full h-full bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: url('./image3.jpg');"></div>
+            <div class="slide absolute w-full h-full bg-cover bg-center bg-no-repeat transition-opacity duration-1000 object-cover object-center" style="background-image: url('./image.jpg'); background-size: 100% 100%;"></div>
+            <div class="slide absolute w-full h-full bg-cover bg-center bg-no-repeat transition-opacity duration-1000 opacity-0 object-cover object-center" style="background-image: url('./image1.jpg'); background-size: 100% 100%;"></div>
+            <div class="slide absolute w-full h-full bg-cover bg-center bg-no-repeat transition-opacity duration-1000 opacity-0 object-cover object-center" style="background-image: url('./image2.jpg'); background-size: 100% 100%;"></div>
+            <div class="slide absolute w-full h-full bg-cover bg-center bg-no-repeat transition-opacity duration-1000 opacity-0 object-cover object-center" style="background-image: url('./image3.jpg'); background-size: 100% 100%;"></div>
         </div>
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="container mx-auto text-center px-6 relative h-full flex flex-col justify-center">
@@ -90,6 +128,19 @@
                         slides[currentSlide].style.opacity = '1';
                     }
                 }
+            });
+
+            // Mobile menu toggle function
+            function toggleMobileMenu() {
+                const mobileMenu = document.getElementById('mobileMenu');
+                mobileMenu.classList.toggle('active');
+            }
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('mobileMenu').classList.remove('active');
+                });
             });
         </script>
     </section>
@@ -311,7 +362,6 @@
                             </div>
                             <div>
                                 <p class="text-lg">9823484493</p>
-                                <p class="text-lg">9834202775</p>
                             </div>
                         </div>
                         <div class="flex items-center">
@@ -329,7 +379,8 @@
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <form id="contact-form" action="https://formspree.io/f/xyyqpwkw" method="POST" class="space-y-6">
+                    <form id="contact-form"  action="https://formspree.io/f/xyzwkwak"
+                    method="POST" class="space-y-6">
                         <div>
                             <label for="name" class="block text-lg mb-2">Name</label>
                             <input type="text" id="name" name="name" class="w-full p-4 rounded-lg bg-blue-800 border border-blue-600 focus:outline-none focus:border-yellow-400 transition duration-300" required>
@@ -342,10 +393,9 @@
                             <label for="message" class="block text-lg mb-2">Message</label>
                             <textarea id="message" name="message" rows="5" class="w-full p-4 rounded-lg bg-blue-800 border border-blue-600 focus:outline-none focus:border-yellow-400 transition duration-300" required></textarea>
                         </div>
-                        <div id="form-status"></div>
+                        <div id="form-status" class="text-yellow-400"></div>
                         <button type="submit" class="bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-300 transition duration-300 transform hover:scale-105">
-                            <span id="submit-text">Send Message</span>
-                            <span id="loading-text" class="hidden">Sending...</span>
+                            Send Message
                         </button>
                     </form>
                 </div>
@@ -385,11 +435,7 @@
         });
 
         // Form submission handling
-        document.getElementById('contact-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
+       
 
         // Slider functionality
         const slider = document.getElementById('slider');
